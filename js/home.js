@@ -1,7 +1,6 @@
 $(document).ready(function () {
   $(window).on("scroll", function () {
     var Windowheight = $(window).scrollTop();
-    console.log(Windowheight);
     $(".moving-animate").css({
       transform: `translateY(${-Windowheight * 0.2}px)`,
     });
