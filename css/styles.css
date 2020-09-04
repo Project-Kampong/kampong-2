@@ -64,7 +64,7 @@ h4 {
           transform: scale(1.1);
 }
 
-header {
+header.main-header {
   height: 100vh;
   min-height: 700px;
   background-image: url("../image/home/banner.png");
@@ -75,17 +75,21 @@ header {
   position: relative;
 }
 
-header .logo-container {
+header.main-header .logo-container {
   position: absolute;
   top: 0;
   padding: 1rem 0;
 }
 
-header .logo-container img {
+header.main-header .logo-container a {
+  display: block;
+}
+
+header.main-header .logo-container img {
   max-height: 40px;
 }
 
-header .banner-container {
+header.main-header .banner-container {
   position: relative;
   z-index: 2;
   height: 100%;
@@ -95,18 +99,18 @@ header .banner-container {
           align-items: center;
 }
 
-header .banner-container h1 {
+header.main-header .banner-container h1 {
   color: white;
   font-weight: bold;
   margin-bottom: 1rem;
 }
 
-header .banner-container p {
+header.main-header .banner-container p {
   color: white;
   font-size: 1.2rem;
 }
 
-header .banner-image {
+header.main-header .banner-image {
   position: absolute;
   z-index: 1;
   right: 0;
@@ -115,16 +119,83 @@ header .banner-image {
   text-align: right;
 }
 
-header .banner-image img {
+header.main-header .banner-image img {
   max-width: 50%;
 }
 
 @media (max-width: 992px) {
-  header .banner-image {
+  header.main-header .banner-image {
     top: 10%;
   }
-  header .banner-image img {
+  header.main-header .banner-image img {
     max-width: 100%;
+    opacity: 0.6;
+  }
+}
+
+header.sub-header {
+  height: 70vh;
+  min-height: 350px;
+  max-height: 500px;
+  background-image: url("../image/home/banner.png");
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: "Montserrat", sans-serif;
+  position: relative;
+}
+
+header.sub-header .logo-container {
+  position: absolute;
+  top: 0;
+  padding: 1rem 0;
+}
+
+header.sub-header .logo-container img {
+  max-height: 40px;
+}
+
+header.sub-header .banner-container {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+          align-items: center;
+}
+
+header.sub-header .banner-container h1 {
+  color: white;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+header.sub-header .banner-container p {
+  color: white;
+  font-size: 1.2rem;
+}
+
+header.sub-header .banner-image {
+  position: absolute;
+  z-index: 1;
+  right: 5%;
+  top: 20px;
+  width: 100%;
+  text-align: right;
+}
+
+header.sub-header .banner-image img {
+  max-width: 40%;
+  max-height: 500px;
+}
+
+@media (max-width: 992px) {
+  header.sub-header .banner-image {
+    top: 20%;
+  }
+  header.sub-header .banner-image img {
+    max-width: 80%;
     opacity: 0.6;
   }
 }
@@ -374,6 +445,86 @@ footer .footer-links .link-col ul li a {
 
 footer .footer-links .link-col:last-child {
   padding-right: 0;
+}
+
+.story-block {
+  margin-top: 10rem;
+}
+
+.story-block .story-content {
+  margin-bottom: 10rem;
+  padding: 0 1rem;
+}
+
+.story-block .story-content p {
+  font-size: 1.2rem;
+  color: #364f6b;
+  margin-top: 2rem;
+  text-align: justify;
+}
+
+.story-block .story-content b {
+  font-size: 1.4rem;
+}
+
+.story-block .team-content {
+  padding: 0 1rem;
+  margin-bottom: 7rem;
+}
+
+.story-block .team-content p {
+  font-size: 1.3rem;
+  color: #364f6b;
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.story-block .team-content .team-display {
+  display: -webkit-box;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-top: 5rem;
+}
+
+.story-block .team-content .team-display .image-container {
+  text-align: center;
+}
+
+.story-block .team-content .team-display .image-container img {
+  max-width: 80%;
+  min-height: 150px;
+  max-height: 180px;
+}
+
+.story-block .team-content .team-display .member-info {
+  margin-top: 1rem;
+  margin-bottom: 5rem;
+}
+
+.story-block .team-content .team-display .member-info p {
+  margin: 0;
+}
+
+.story-block .team-content .team-display .member-info .name {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #364f6b;
+}
+
+.story-block .team-content .team-display .member-info .role {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #364f6b;
+  margin-top: 0.5rem;
+  text-transform: capitalize;
+}
+
+.story-block .team-content .team-display .member-info .intro {
+  font-size: 1rem;
+  color: #364f6b;
+  opacity: 0.6;
+  margin-top: 1rem;
 }
 
 .moving-animate {
