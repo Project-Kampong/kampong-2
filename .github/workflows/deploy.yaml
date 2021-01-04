@@ -18,5 +18,5 @@ jobs:
           HOST: ${{ secrets.DEV_HOST }}
           USERNAME: root
           PORT: 22
-          KEY: ${{ secrets.SSHKEY }}
-          script: ~/deployment-scripts/frontend-script/development/update-serve-about.sh
+          PASSWORD: ${{ secrets.DEV_PASSWORD }}
+          script: ~/deployment-scripts/update-serve-about.sh dev
