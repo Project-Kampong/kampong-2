@@ -1,4 +1,4 @@
-name: Bump version
+name: Bump tag version and deploy to dev server
 on:
   push:
     branches:
@@ -16,3 +16,11 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           WITH_V: true
+      - name: Run deployment script on development
+        uses: appleboy/ssh-action@master
+        with:
+          HOST: ${{ secrets.DEV_HOST }}
+          USERNAME: root
+          PORT: 22
+          PASSWORD: ${{ secrets.DEV_PASSWORD }}
+          script: ~/deployment-scripts/update-serve-about.sh dev
